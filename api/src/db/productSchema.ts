@@ -11,5 +11,9 @@ export const productsTable = pgTable("products", {
   
 });
 
+export const createProductSchema = createInsertSchema(productsTable).omit({
+  id: true,
+});
+
 
 
